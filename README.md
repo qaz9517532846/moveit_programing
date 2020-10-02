@@ -89,7 +89,14 @@ int main(int argc, char **argv)
 
 # illustration code function.
 
-| Function                           | Description                                                |
-| ---                                | ---                                                        | 
-| my_zm_robot.move_map(x, y, theta)  | zm_robot can move to designated location relative to map.  |
-| my_zm_robot.move_base(x, y, theta) | zm_robot can move to designated location relative to base. ||
+| Function                                               | DataType            | Description                                                               |
+| ---                                                    | ---                 | ---                                                                       | 
+| Mymoveit_move.PLANNING_GROUP                           | std::string         | Set robot arm planning name.                                              |
+| Mymoveit_move.ROBOT_ARM_END_TF                         | std::string         | Set robot arm End-Effector TF.                                            |
+| Mymoveit_move.MaxVelScale                              | double              | Set robot arm move max velocity scale.                                    |
+| Mymoveit_move.MaxAccScale                              | double              | Set robot arm move max acceleration scale.                                |
+| Mymoveit_move.move_joint(J1, J2, J3, J4, J5, J6)       | motion function     | The robot arm can move to designated joint position using joint mode.     |
+| Mymoveit_move.move_pose(x, y, z, rx, ry, rz)           | motion function     | The robot arm can move to designated x-y-z position using joint mode.     |
+| Mymoveit_move.move_pose_cartesian(x, y, z, rx, ry, rz) | motion function     | The robot arm can move to designated x-y-z position using cartesian mode. |
+| Mymoveit_move.getJointValue()                          | std::vector<double> | Get robot arm current joint position.                                     |
+| Mymoveit_move.getPoseValue()                           | std::vector<double> | Get robot arm current pose position.                                      ||

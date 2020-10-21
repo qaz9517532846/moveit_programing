@@ -7,11 +7,10 @@ int main(int argc, char **argv)
   ros::AsyncSpinner spinner(1);
   spinner.start();
 
-  moveit_move Mymoveit_move;
-
   /////// Set robot arm group //////
 
-  Mymoveit_move.PLANNING_GROUP = "manipulator";
+  moveit_move Mymoveit_move("manipulator");
+
   Mymoveit_move.ROBOT_ARM_END_TF = "tool0";
 
   ////// Set robot arm max vel scal and acc scale //////

@@ -1,9 +1,17 @@
 #include <moveit_programing/programing_function.h>
 
+moveit_move::moveit_move(std::string PLANNING_GROUP) : group(PLANNING_GROUP), planning_group(PLANNING_GROUP)
+{
+
+}
+
+moveit_move::~moveit_move()
+{
+
+}
+
 void moveit_move::move_joint(double joint1, double joint2, double joint3, double joint4, double joint5, double joint6)
 {
-  moveit::planning_interface::MoveGroupInterface group(PLANNING_GROUP);
-
   group.setMaxVelocityScalingFactor(MaxVelScale);
   group.setMaxAccelerationScalingFactor(MaxAccScale);
 
@@ -31,8 +39,6 @@ void moveit_move::move_joint(double joint1, double joint2, double joint3, double
 
 void moveit_move::move_pose(double x, double y, double z, double rx, double ry, double rz)
 {
-  moveit::planning_interface::MoveGroupInterface group(PLANNING_GROUP);
-
   group.setMaxVelocityScalingFactor(MaxVelScale);
   group.setMaxAccelerationScalingFactor(MaxAccScale);
 
@@ -56,8 +62,6 @@ void moveit_move::move_pose(double x, double y, double z, double rx, double ry, 
 
 void moveit_move::move_pose_cartesian(double x, double y, double z, double rx, double ry, double rz)
 {
-  moveit::planning_interface::MoveGroupInterface group(PLANNING_GROUP);
-
   group.setMaxVelocityScalingFactor(MaxVelScale);
   group.setMaxAccelerationScalingFactor(MaxAccScale);
 
@@ -88,8 +92,6 @@ void moveit_move::move_pose_cartesian(double x, double y, double z, double rx, d
 std::vector<double> moveit_move::getJointValue()
 {
   //double J1, J2, J3, J4, J5, J6;
-
-  moveit::planning_interface::MoveGroupInterface group(PLANNING_GROUP);
 
   const moveit::core::JointModelGroup* joint_model_group = group.getCurrentState()->getJointModelGroup(PLANNING_GROUP);
   

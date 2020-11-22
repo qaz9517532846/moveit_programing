@@ -99,3 +99,7 @@ int main(int argc, char **argv)
 | Mymoveit_move.move_pose_cartesian(x, y, z, rx, ry, rz) | motion function     | The robot arm can move to designated x-y-z position using cartesian mode. |
 | Mymoveit_move.getJointValue()                          | std::vector<double> | Get robot arm current joint position.                                     |
 | Mymoveit_move.getPoseValue()                           | std::vector<double> | Get robot arm current pose position.                                      ||
+
+------
+
+Copyright © 2020 ZM Robotics Software Laboratory.

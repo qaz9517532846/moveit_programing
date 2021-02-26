@@ -11,7 +11,7 @@
 
   ``` $ sudo apt-get install ros-melodic-moveit ```
 
-####### Using moveit_programing, take Universal Robot UR5 as an example.
+###### Using moveit_programing, take Universal Robot UR5 as an example.
 
 - Please open UR5 gazebo and moveit package.
 
@@ -21,7 +21,7 @@
 
   ``` $ roslaunch ur5_moveit_config moveit_rviz.launch config:=true ```
 
-####### Start to using moveit_programing package.
+###### Start to using moveit_programing package.
 
 ``` bash
 $ rosrun moveit_programing programing_main
